@@ -1,5 +1,18 @@
 <script setup lang="ts">
 import { useCounter } from '~/store/counter'
+import BluetoothTerminal from '~/utils/bluetoothTerminal'
+
+let terminal = new BluetoothTerminal();
+
+terminal.receive = function(data) {
+  alert(data);
+};
+
+let requestDevice = () => {
+    terminal.connect().then(() => {
+        alert(terminal.getDeviceName() + ' is connected!');
+    });
+}
 
 const counter = useCounter()
 </script>
@@ -14,6 +27,10 @@ const counter = useCounter()
         <br>
         myRef: {{ counter.myRef }}
       </p>
+
+      <button @click="requestDevice()">
+        Request Bluetooth Device
+    </button>
 
       <input v-model="counter.myRef" class="text-black" type="text">
       <br>

@@ -7,14 +7,14 @@ export interface ILocales {
 }
 
 export const availableLocales: ILocales = {
+  ko: {
+    name: 'Korea',
+    iso: 'ko',
+    flag: 'i-twemoji-flag-south-korea',
+  },
   en: {
     name: 'English',
     iso: 'en',
     flag: 'i-twemoji-flag-us-outlying-islands',
-  },
-  tr: {
-    name: 'Turkce',
-    iso: 'tr',
-    flag: 'i-twemoji-flag-turkey',
   },
 }

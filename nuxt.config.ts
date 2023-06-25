@@ -29,19 +29,22 @@ export default defineNuxtConfig({
         },
       }),
     ],
-    safelist: ['i-twemoji-flag-us-outlying-islands', 'i-twemoji-flag-turkey'],
+    safelist: ['i-twemoji-flag-us-outlying-islands', 'i-twemoji-flag-south-korea'],
   },
 
   // localization - i18n config
   i18n: {
     locales: [
       {
+        code: 'ko',
+        file: 'ko-KR.json',
+      },
+      {
         code: 'en',
         file: 'en-US.json',
       },
-      { code: 'tr', file: 'tr-TR.json' },
     ],
-    defaultLocale: 'tr',
+    defaultLocale: 'ko',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default',
