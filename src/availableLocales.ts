@@ -8,7 +8,7 @@ export interface ILocales {
 
 export const availableLocales: ILocales = {
   ko: {
-    name: 'Korea',
+    name: '한국어',
     iso: 'ko',
     flag: 'i-twemoji-flag-south-korea',
   },

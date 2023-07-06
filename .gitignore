@@ -5,6 +5,10 @@ nuxt.d.ts
 .output
 .idea
 
+android
+dist
+ios
+
 .yarn/*
 !.yarn/patches
 !.yarn/releases
